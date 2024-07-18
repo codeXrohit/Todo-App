@@ -1,90 +1,182 @@
-
 :root {
-    font-size: 20px;
-  }
-  body {
-    font: 1em/1.618 Inter, sans-serif;
-    color: #224;
-    background-color:  #203939;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 90vh;
-    padding: 30px;
-    margin: 0;
-    
-  }
-  
-  #maindiv {
-    width: 500px;
-    height: 500px;
-    padding: 35px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.45);
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-    background-color:  #335151;
-    backdrop-filter: blur(15px);
-    overflow: hidden;
-    overflow-y:scroll;
-   
-  }
+  font-size: 20px;
+}
+body {
+  font: 1em/1.618 Inter, sans-serif;
+  color: #224;
+  background-color: #203939;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  padding: 30px;
+  margin: 0;
+}
 
-  #maindiv::-webkit-scrollbar {
-    width: 13px;
-  }
- 
-  h3 {
-    margin-top: 15px;
-  }
-  
-  #inputbox{
-    width: 300px;
-    height: 40px;
-    border-radius: 7px;
-    border: dotted 1.5px rgb(174, 126, 36);
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-  }
+#maindiv {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  max-height: 500px;
+  padding: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  background-color: #335151;
+  backdrop-filter: blur(15px);
+  overflow: hidden;
+  overflow-y: scroll;
+}
 
-  #inputbox:hover {
-    border: 2px solid orange;
-  }
+.scroll {}
 
+.tittle {
+  font-weight: 500 !important;
+  font-family: 'Zara', sans-serif !important;
+  font-size: 14px !important;
+  padding-left: 15px;
+}
 
-  .button{
-    background-color: rgb(174, 126, 36);
-    margin-top: 20px;
-    margin-left: 15px;
-    border-radius: 5px;
-    border: dotted 1.5px rgb(64, 58, 58);
-    font-weight: bold;
-    width: 100px;
-    height: 43px;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-  }
-  
- 
-  .button:hover{
- border: 2px solid rgb(174, 126, 36);
-  }
+#maindiv::-webkit-scrollbar {
+  width: 13px;
+}
 
-  .div {
-    border: dotted 1.5px rgb(64, 58, 58);
-    border-radius: 3px;
-    margin-left: 10.2rem;
-    margin-bottom: 20px;
-  }
+h3 {
+  margin-top: 15px;
+}
 
+.input-container {
+  display: flex;
+  align-items: center;
+}
 
-  .mid {
-    display: flex;
-    align-items: center;
+#inputbox {
+  flex-grow: 1;
+  height: 40px;
+  border-radius: 7px;
+  border: dotted 1.5px rgb(174, 126, 36);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+}
 
-  }
+#inputbox:hover {
+  border: 2px solid orange;
+}
+
+.button {
+  background-color: rgb(174, 126, 36);
+  margin-left: 15px;
+  border-radius: 5px;
+  border: dotted 1.5px rgb(64, 58, 58);
+  font-weight: bold;
+  width: 100px;
+  height: 40px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.button:hover {
+  border: 2px solid rgb(174, 126, 36);
+}
+
+.div1 {
+  border: dotted 1.5px rgb(64, 58, 58);
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.div {
+  border: dotted 1.5px rgb(64, 58, 58);
+  border-radius: 3px;
+  margin-bottom: 20px;
+  position: absolute;
+  right: 10px;
+}
+
+.mid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
 
 .data {
   font-size: 15px;
   font-weight: 600;
 }
- 
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #maindiv {
+      padding: 20px;
+      max-height: 400px;
+  }
+
+  .button {
+      width: 80px;
+      height: 35px;
+      margin-left: 10px;
+  }
+
+  #inputbox {
+      height: 35px;
+  }
+
+  h3 {
+      font-size: 20px;
+  }
+
+  .data {
+      font-size: 14px;
+  }
+
+  .div {
+      right: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+      padding: 10px;
+  }
+
+  #maindiv {
+      padding: 15px;
+      max-height: 400px;
+      max-width: 330px;
+  }
+
+  .button {
+      width: 60px;
+      height: 30px;
+      font-size: 12px;
+      margin-left: 5px;
+  }
+
+  #inputbox {
+      height: 30px;
+  }
+
+  h3 {
+      font-size: 18px;
+  }
+
+  .data {
+      font-size: 12px;
+  }
+
+  .div1 {
+      font-size: 12px;
+      margin-bottom: 10px;
+  }
+
+  .div {
+      font-size: 12px;
+      right: 5px;
+  }
+
+  .mid {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+}
